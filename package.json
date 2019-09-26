@@ -9,9 +9,7 @@
     "wrap",
     "if",
     "try",
-    "catch",
-    "for",
-    "loop"
+    "catch"
   ],
   "repository": {
     "type": "git",
