@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/drcallaway/vscode-surround-with/master/images/logo.png" width="128">
 </p>
 <p align="center">
-Wraps a code selection in an `if` or `try/catch` block with proper indentation
+Wraps a code selection in an "if" or "try/catch" block with proper indentation
 </p>
 
 # Surround With
