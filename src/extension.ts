@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
         await editor.edit(() => {
             editor.selection = new vscode.Selection(
                 new vscode.Position(startLine.lineNumber, startLine.firstNonWhitespaceCharacterIndex + 4),
-                new vscode.Position(startLine.lineNumber, startLine.firstNonWhitespaceCharacterIndex + 13)
+                new vscode.Position(startLine.lineNumber, startLine.firstNonWhitespaceCharacterIndex + 4)
             );
         });
     });
@@ -31,11 +31,11 @@ export function activate(context: vscode.ExtensionContext) {
 
         // highlight catch variable
         await editor.edit(() => {
-            const catchBodyLineNumber = startLine.lineNumber + lines.length + 1;
+            const catchBodyLineNumber = startLine.lineNumber + lines.length + 2;
             const catchLine = editor.document.lineAt(catchBodyLineNumber);
             editor.selection = new vscode.Selection(
-                new vscode.Position(catchLine.lineNumber, catchLine.firstNonWhitespaceCharacterIndex + 9),
-                new vscode.Position(catchLine.lineNumber, catchLine.firstNonWhitespaceCharacterIndex + 14)
+                new vscode.Position(catchLine.lineNumber, catchLine.firstNonWhitespaceCharacterIndex),
+                new vscode.Position(catchLine.lineNumber, catchLine.firstNonWhitespaceCharacterIndex + 15)
             );
         });
     });
@@ -69,7 +69,7 @@ function surroundWithIf(selection: vscode.Selection) {
     let lines = getSelectLines(selection);
     const { prefix } = getPrefixAndIndent(lines[0]);
     return [
-        `${prefix}if (condition) {`,
+        `${prefix}if () {`,
         ...indentLines(lines),
         `${prefix}}`
     ].join('\n');
