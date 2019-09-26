@@ -1,7 +1,7 @@
 {
   "name": "vscode-surround-with",
   "displayName": "Surround With",
-  "description": "Surround selection with if or try/catch block in Visual Studio Code",
+  "description": "Surround selection with 'if' or 'try/catch' block in Visual Studio Code",
   "version": "1.0.0",
   "publisher": "drcallaway",
   "keywords": [
@@ -48,10 +48,13 @@
     "vscode:prepublish": "tsc -p ./",
     "compile": "tsc -watch -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "test": "node ./node_modules/vscode/bin/test",
+    "login": "vsce login drcallaway",
+    "publish": "vsce publish drcallaway"
   },
   "devDependencies": {
     "typescript": "^3.6.3",
+    "vsce": "^1.66.0",
     "vscode": "^1.1.36"
   }
 }
