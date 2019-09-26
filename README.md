@@ -12,3 +12,5 @@ Select text to wrap with an `if` or `try/catch` block, press `cmd+shift+p` (`ctr
 ## Release Notes
 ### 1.0.0
 First release
+### 1.1.0
+Slightly modified the generated code
