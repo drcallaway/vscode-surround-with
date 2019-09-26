@@ -32,6 +32,7 @@
     "onCommand:extension.surroundWithTry"
   ],
   "main": "./out/src/extension",
+  "icon": "images/logo.png",
   "contributes": {
     "commands": [
       {
