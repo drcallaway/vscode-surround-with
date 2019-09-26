@@ -1,5 +1,12 @@
+<p align="center">
+<img src="https://raw.githubusercontent.com/drcallaway/vscode-surround-with/master/images/logo.png" width="128">
+</p>
+<p align="center">
+Wraps a code selection in an `if` or `try/catch` block with proper indentation
+</p>
+
 # Surround With
-Wraps a code selection in an `if` or `try/catch` block with proper indentation (similar to IntelliJ's "Surround With..." command). This extension is based on and adds some bug fixes to this [unsupported project](https://github.com/JuoCode/vscode-surround).
+This extension is patterned after IntelliJ's "Surround With..." command. It is based on and adds some bug fixes to this [unsupported project](https://github.com/JuoCode/vscode-surround).
 
 ## Install
 Install from VS Code with `cmd+shift+x` (or `ctrl+shift+x` on Windows), search for `vscode-surround-with`, and click "Install".
