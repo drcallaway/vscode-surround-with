@@ -14,10 +14,8 @@ export function activate(context: vscode.ExtensionContext) {
 
         // highlight if condition
         await editor.edit(() => {
-            editor.selection = new vscode.Selection(
-                new vscode.Position(startLine.lineNumber, startLine.firstNonWhitespaceCharacterIndex + 4),
-                new vscode.Position(startLine.lineNumber, startLine.firstNonWhitespaceCharacterIndex + 4)
-            );
+            const position = new vscode.Position(startLine.lineNumber, startLine.firstNonWhitespaceCharacterIndex + 4);
+            editor.selection = new vscode.Selection(position, position);
         });
     });
 
@@ -33,10 +31,8 @@ export function activate(context: vscode.ExtensionContext) {
         await editor.edit(() => {
             const catchBodyLineNumber = startLine.lineNumber + lines.length + 2;
             const catchLine = editor.document.lineAt(catchBodyLineNumber);
-            editor.selection = new vscode.Selection(
-                new vscode.Position(catchLine.lineNumber, catchLine.firstNonWhitespaceCharacterIndex),
-                new vscode.Position(catchLine.lineNumber, catchLine.firstNonWhitespaceCharacterIndex + 15)
-            );
+            const position = new vscode.Position(catchLine.lineNumber, catchLine.text.length);
+            editor.selection = new vscode.Selection(position, position);
         });
     });
 
@@ -82,7 +78,7 @@ function surroundWithTry(selection: vscode.Selection) {
         `${prefix}try {`,
         ...indentLines(lines),
         `${prefix}} catch (error) {`,
-        `${prefix}${indent}// handle error`,
+        `${prefix}${indent}`,
         `${prefix}}`,
     ].join('\n');
 }
