@@ -2,7 +2,7 @@
   "name": "vscode-surround-with",
   "displayName": "Surround With",
   "description": "Surround selection with 'if' or 'try/catch' block in Visual Studio Code",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "publisher": "drcallaway",
   "keywords": [
     "surround",
