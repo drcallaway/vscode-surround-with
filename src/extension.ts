@@ -77,7 +77,7 @@ function surroundWithTry(selection: vscode.Selection) {
     return [
         `${prefix}try {`,
         ...indentLines(lines),
-        `${prefix}} catch (error) {`,
+        `${prefix}} catch (err) {`,
         `${prefix}${indent}`,
         `${prefix}}`,
     ].join('\n');

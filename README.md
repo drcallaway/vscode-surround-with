@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/drcallaway/vscode-surround-with/master/images/logo.png" width="128">
+<img src="https://raw.githubusercontent.com/drcallaway/vscode-surround-with/master/images/logo2.png" width="128">
 </p>
 <p align="center">
 Wraps a code selection in an "if" or "try/catch" block with proper indentation
